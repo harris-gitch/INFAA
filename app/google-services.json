@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "718931298700",
+    "project_id": "infaa-ec9fd",
+    "storage_bucket": "infaa-ec9fd.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:718931298700:android:777348adef85a11415aea9",
+        "android_client_info": {
+          "package_name": "com.example.infaa"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "718931298700-sggfg4tqg9b06bo6gt408re4v7tgqct6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA1F4R8jCAVWEyiGhAa6BSpdfsnxZLu97I"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "718931298700-sggfg4tqg9b06bo6gt408re4v7tgqct6.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
