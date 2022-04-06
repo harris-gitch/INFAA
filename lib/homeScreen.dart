@@ -13,33 +13,45 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     return Container(
         decoration: BoxDecoration(
-          image: DecorationImage(
+         image: DecorationImage(
             image: AssetImage(' assets/back.png '),
-          ),
+         ),
+
         ),
         child: Scaffold(
-          body: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Image.asset("assets/welcome.png"),
-              Container(
-                color: Color(0xffe69135),
-                margin: EdgeInsets.all(65),
-                width: double.infinity,
-                child: ElevatedButton(
-                  onPressed: () {
-
-
-              Navigator.of(context).push(MaterialPageRoute(builder: (c) => Service()));
-
-                  },
-                  child: Text(
-                    "Continue",
-                    style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+          body: Container(
+            width: double.infinity,
+            decoration: const BoxDecoration(
+                image: DecorationImage(
+                    image: AssetImage("assets/back.png"), fit: BoxFit.fill)),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Image.asset("assets/wellcome.png"),
+                Container(
+                  padding: EdgeInsets.all(10.0),
+                  margin: EdgeInsets.all(15),
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(50),
+                    color: Color(0xffe69135),
                   ),
-                ),
-              )
-            ],
+                  width: double.infinity,
+                  child: MaterialButton(
+                    onPressed: () {
+
+
+                Navigator.of(context).push(MaterialPageRoute(builder: (c) => Service()));
+
+                    },
+                    child: Text(
+                      "Continue",
+                      style: TextStyle(fontSize: 20.0, fontWeight: FontWeight.bold,color: Colors.white
+                      ),
+                    ),
+                  ),
+                )
+              ],
+            ),
           ),
         ));
   }

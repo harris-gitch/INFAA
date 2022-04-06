@@ -2,6 +2,8 @@ import 'dart:ffi';
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:infaa/iftarSaim.dart';
+import 'package:infaa/transport.dart';
 
 class Demande extends StatelessWidget{
   @override
@@ -57,7 +59,11 @@ class Demande extends StatelessWidget{
                             color: const Color(0xffe69135),
                             borderRadius: BorderRadius.circular(50),
                           ),
-                          child: MaterialButton(onPressed: (){},
+                          child: MaterialButton(onPressed: (){
+                            Navigator.of(context).push(MaterialPageRoute(
+                              builder: (c) => Transport(),
+                            ));
+                          },
                             child: const Text("Transport",
                               style: TextStyle(
                                   fontSize: 20.0,
@@ -107,7 +113,12 @@ class Demande extends StatelessWidget{
                               color: const Color(0xffe69135),
                               borderRadius: BorderRadius.circular(50),
                             ),
-                            child: MaterialButton(onPressed: (){},
+                            child: MaterialButton(onPressed: ()
+                            {
+                              Navigator.of(context).push(MaterialPageRoute(
+                                builder: (c) => Iftar_Saim(),
+                              ));
+                            },
                               child: const Text("Iftar saim",
                                 style: TextStyle(
                                     fontSize: 20.0,

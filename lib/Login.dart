@@ -8,6 +8,7 @@ class Login extends StatefulWidget {
 }
 
 class _LoginState extends State<Login> {
+
   String dialCodeDigits = "+213";
   TextEditingController _controller = TextEditingController();
   @override
@@ -27,26 +28,34 @@ class _LoginState extends State<Login> {
               child: const Center(
                 child: Text(
                   "Enter phone number",
-                  style: TextStyle(fontWeight: FontWeight.bold, fontSize: 40.0),
+                  style: TextStyle(fontWeight: FontWeight.bold, fontSize: 25.0),
                 ),
               ),
             ),
             SizedBox(height: 25.0),
-            SizedBox(
-              width: 400,
-              height: 60,
-              child: Text(dialCodeDigits),
-            ),
+
             Container(
-              color: Color(0xff542a7d),
               margin: EdgeInsets.only(top: 10, left: 10, right: 10),
+              color: Colors.white,
               child: TextField(
-                decoration: InputDecoration(
-                    suffixIcon: Icon(Icons.call_made_rounded),
+                decoration:  InputDecoration(
+                    border: OutlineInputBorder(
+                        borderSide: BorderSide(color: Color(0xffd4b01e)),
+                        borderRadius: BorderRadius.circular(50)
+                    ) ,
+                     prefixIcon: Padding(
+                       padding: EdgeInsets.all(10.0),
+                       child: Text("+213",
+                       style: TextStyle(
+                         fontSize: 16.0,
+                         fontWeight: FontWeight.bold
+                       ),),
+                     ),
+                    suffixIcon: Icon(Icons.phone,color: Color(0xffd4b01e),),
                     hintText: "Enter the Phone Number",
                     prefix: Padding(
                       padding: EdgeInsets.all(4),
-                      child: Text(dialCodeDigits),
+                      child: Text(""),
                     )),
                 maxLength: 9,
                 keyboardType: TextInputType.number,
@@ -54,20 +63,26 @@ class _LoginState extends State<Login> {
               ),
             ),
             Container(
-              padding: EdgeInsets.all(4),
+              padding: EdgeInsets.all(10.0),
               margin: EdgeInsets.all(15),
-              color: Color(0xff542a7d),
-              width: double.infinity,
-              child: ElevatedButton(
+
+              decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(50),
+                  color: Color(0xff542a7d),
+              ),
+              width: 350,
+              child: MaterialButton(
                 onPressed: () {
                   Navigator.of(context).push(MaterialPageRoute(
                       builder: (c) => OTPControllerScreen(
                           phone: _controller.text,
-                          codeDigits: dialCodeDigits)));
+                         codeDigits: dialCodeDigits
+                      )));
                 },
-                child: Text("Next",
+                child: const Text("Next",
                     style: TextStyle(
-                        fontWeight: FontWeight.bold, color: Colors.white)),
+                        fontWeight: FontWeight.bold, color: Colors.white,
+                    fontSize: 25.0)),
               ),
             )
           ],

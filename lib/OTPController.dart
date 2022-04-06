@@ -2,7 +2,10 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:pinput/pin_put/pin_put.dart';
 import 'package:infaa/homeScreen.dart';
-
+import 'dart:async';
+import 'package:async_builder/async_builder.dart';
+import 'package:async_builder/init_builder.dart';
+import 'package:firebase_core/firebase_core.dart';
 class OTPControllerScreen extends StatefulWidget {
   final String phone;
   final String codeDigits;
@@ -76,7 +79,7 @@ class _OTPControllerScreenState extends State<OTPControllerScreen> {
     return Container(
         decoration: BoxDecoration(
           image: DecorationImage(
-            image: AssetImage(' assets/BACKfull.png '),
+            image: AssetImage(' assets/back.png '),
           ),
         ),
         child: Scaffold(
@@ -141,4 +144,7 @@ class _OTPControllerScreenState extends State<OTPControllerScreen> {
           ),
         ));
   }
+
 }
+
+

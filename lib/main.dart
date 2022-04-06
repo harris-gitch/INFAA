@@ -20,7 +20,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
        home:AnimatedSplashScreen(
-         splash:  Image.asset("assets/logo_infaa4x.png",
+         splash:  Image.asset("assets/logo_infaa.png",
                fit: BoxFit.fill,  ),
          nextScreen:Login(),
          splashTransition: SplashTransition.fadeTransition,
@@ -28,4 +28,7 @@ class MyApp extends StatelessWidget {
        ) ,
     );
   }
+  //Widget currentPage =Login();
+
 }
+

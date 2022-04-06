@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:infaa/demand.dart';
 
 class Iftar_Saim extends StatefulWidget{
   @override
@@ -19,7 +20,11 @@ class _Iftar_SaimState extends State<Iftar_Saim> {
         backgroundColor: const Color(0xff542a7d),
         elevation: 0.0,
         titleSpacing: 20.0,
-        leading: IconButton(icon: const Icon(Icons.arrow_back) ,onPressed: (){},),
+        leading: IconButton(icon: const Icon(Icons.arrow_back) ,onPressed: (){
+          Navigator.of(context).push(MaterialPageRoute(
+            builder: (c) => Demande(),
+          ));
+        },),
         title: const Text("Iftar Saim",
           style: TextStyle(
             fontSize: 20.0,
